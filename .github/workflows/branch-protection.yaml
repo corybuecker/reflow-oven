@@ -1,0 +1,29 @@
+name: branch-protection
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./software
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c
+        with:
+          components: clippy
+      - run: cargo clippy -- -D warnings
+
+  check-success:
+    runs-on: ubuntu-latest
+    needs:
+      - lint
+    steps:
+      - run: echo true

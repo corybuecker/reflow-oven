@@ -27,14 +27,16 @@ async fn main(_spawner: Spawner) -> ! {
 
     let spi = Spi::new(peripherals.SPI2, Config::default()).unwrap();
     let mut spi = spi
-        .with_cs(peripherals.GPIO16)
-        .with_sck(peripherals.GPIO7)
-        .with_miso(peripherals.GPIO2);
+        .with_cs(peripherals.GPIO4)
+        .with_sck(peripherals.GPIO6)
+        .with_miso(peripherals.GPIO5);
 
-    let mut buffer: [u8; 64] = [0; 64];
+    let mut buffer: [u8; 4] = [0; 4];
     match spi.read(&mut buffer) {
         Ok(_) => {
-            defmt::error!("{}", &buffer);
+            for byte in buffer {
+                defmt::info!("{:08b}", byte);
+            }
         }
         Err(e) => {
             defmt::error!("{}", e);

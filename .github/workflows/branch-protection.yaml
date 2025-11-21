@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
       - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c
         with:
+          target: riscv32imac-unknown-none-elf
           components: clippy
       - run: cargo clippy -- -D warnings
 

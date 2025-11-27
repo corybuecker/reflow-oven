@@ -18,5 +18,6 @@ esp-hal = { version = "1.0.0", features = ["esp32c6", "unstable", "defmt"] }
 esp-rtos = { version = "0.2.0", features = ["embassy", "esp32c6"] }
 heapless = { version = "0.9.1" }
 pid = "4.0.0"
+splines = { version = "5.0.0", default-features = false, features = ["num-traits"] }
 static_cell = "2.1.1"
 uuid = { version = "1.18.1", default-features = false }

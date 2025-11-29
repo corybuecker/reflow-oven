@@ -7,11 +7,12 @@ mod profile;
 mod temperature;
 
 use crate::{
-    led::{blue_led, create_channel, off, red_led},
+    led::{blue_led, create_channel, green_led, off, red_led},
     profile::Profile,
     temperature::Temperature,
 };
 use core::future;
+use defmt::println;
 use embassy_executor::Spawner;
 use embassy_futures::join::join;
 use embassy_time::{Instant, Timer};
@@ -82,8 +83,8 @@ async fn adjust_temperature_wrapper(
 ) -> () {
     let mut profile = Profile::new();
 
-    if temperature.current_reading() < profile.heatsoak_target {
-        while temperature.current_reading() < profile.heatsoak_target {
+    if temperature.current_reading() < profile.heatsoak_temperature_target {
+        while temperature.current_reading() < profile.heatsoak_temperature_target {
             defmt::info!(
                 "heatsoak_current_temperature={}",
                 temperature.current_reading()
@@ -103,23 +104,25 @@ async fn adjust_temperature_wrapper(
     }
 
     let program_start = Instant::now();
+    println!("runtime,desired_temperature,current_temperature,control_output",);
 
     loop {
         let runtime = Instant::now() - program_start;
         let runtime = runtime.as_millis() as f32 / 1000.0;
+
         let current_temperature = temperature.current_reading();
         let desired_temperature = profile.desired_temperature(runtime);
         let control_output = profile.control_output(runtime, current_temperature);
 
-        defmt::info!(
-            "runtime={} desired_temperature={} current_temperature={} control_output={}",
-            runtime,
-            desired_temperature,
-            current_temperature,
-            control_output.output
+        println!(
+            "{},{},{},{}",
+            runtime, desired_temperature, current_temperature, control_output
         );
 
-        if control_output.output > 0.0 {
+        if runtime > profile.cooling_time_target {
+            output.set_low();
+            let _ = green_led(&mut channel).await;
+        } else if control_output > 0.0 {
             output.set_high();
             let _ = red_led(&mut channel).await;
         } else {

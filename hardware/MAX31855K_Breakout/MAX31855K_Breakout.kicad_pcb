@@ -150,7 +150,7 @@
 		(property "Reference" "Q1"
 			(at 2.1 1.5 0)
 			(layer "F.SilkS")
-			(uuid "c6bd971c-0863-4484-90b6-5e8b4eb451c0")
+			(uuid "7ebf8c27-db9b-49ee-9a43-6e51af1a3a19")
 			(effects
 				(font
 					(size 1 1)
@@ -161,7 +161,7 @@
 		(property "Value" "Q_NMOS_GSD"
 			(at 0 2.4 0)
 			(layer "F.Fab")
-			(uuid "87a77c22-b828-4de8-8dad-54c70bf514d8")
+			(uuid "5e5c12cb-11e4-402c-9521-c09ed41bbffc")
 			(effects
 				(font
 					(size 1 1)
@@ -173,7 +173,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "931ce027-b6f3-4fc5-a493-632253c734c3")
+			(uuid "a93af709-a342-40e5-b823-926dbe8db87b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -185,10 +185,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "cd6d7139-c66a-4043-b123-3f30d467ad38")
+			(uuid "1329037d-359a-4052-9bc7-0d48f39e397b")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "2N7002NCT-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0e4b7587-0685-4dca-aae1-8fbb364ff1a5")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -474,7 +487,7 @@
 		(property "Reference" "R2"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
-			(uuid "1ff54057-df58-4b29-8ec5-1b943b6ca31c")
+			(uuid "172f4d2e-c220-49aa-8cc4-0e53c612a01e")
 			(effects
 				(font
 					(size 1 1)
@@ -485,7 +498,7 @@
 		(property "Value" "91"
 			(at 0 1.65 0)
 			(layer "F.Fab")
-			(uuid "de2f1a3a-3668-44c5-92ec-dd2728b36f43")
+			(uuid "f4dcffa8-9f7e-4224-ae9a-258aaf6a686f")
 			(effects
 				(font
 					(size 1 1)
@@ -497,7 +510,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "999e68ab-fccf-4f3e-ba0d-5ce88c18c00f")
+			(uuid "3530f004-c602-4a10-b3dd-b1c7e0952f7f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -509,10 +522,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f3d7fb22-0058-4d20-b5dd-7f65fe9af083")
+			(uuid "031a06da-7c7c-4fb9-8a97-8fd3b2d3882a")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "P91.0CCT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2c39739-e131-4e2b-9176-2354841ac760")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -674,7 +700,7 @@
 		(property "Reference" "J2"
 			(at 2.55 4.7 0)
 			(layer "F.SilkS")
-			(uuid "b28d7df9-6e64-4399-a9c4-0ce8d6a126a1")
+			(uuid "5b755462-948e-4c59-9082-89467264a567")
 			(effects
 				(font
 					(size 1 1)
@@ -685,7 +711,7 @@
 		(property "Value" "Conn_01x03_Socket"
 			(at 2.5 4.6 0)
 			(layer "F.Fab")
-			(uuid "ed6ece9a-4cf1-487a-b87b-3c96e97e28f8")
+			(uuid "7203fd1f-e358-46cf-9bb9-389fc0060a45")
 			(effects
 				(font
 					(size 1 1)
@@ -697,7 +723,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d2605625-7b94-40fb-9096-767b912e6468")
+			(uuid "41eca83f-452e-48ab-be05-59de55dc5af9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -709,10 +735,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b8f6aed8-cff9-427a-b4b8-315c79d34ca9")
+			(uuid "b69cee07-da1a-45be-87d7-d3a75d754c66")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "455-2248-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "433d7a36-cf69-43d1-b653-26e072c7cca4")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -1130,7 +1169,7 @@
 			(at 0 -4.15 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "c412bf9f-ae8f-45f2-aeba-783331215eee")
+			(uuid "e606d1b3-0bf8-4dfb-98e3-1cd318842445")
 			(effects
 				(font
 					(size 1 1)
@@ -1141,7 +1180,7 @@
 		(property "Value" "MountingHole"
 			(at 0 4.15 0)
 			(layer "F.Fab")
-			(uuid "96b5872d-70f1-4c3c-9bd7-bc13e65a7143")
+			(uuid "2f8387f5-e566-4780-a2ae-4fb57a24a589")
 			(effects
 				(font
 					(size 1 1)
@@ -1153,7 +1192,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ccc2ceb4-2ba0-448f-97af-205bf3f45131")
+			(uuid "8f5f1df3-88d1-4ad1-b65b-6f5aa5412fa1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1165,10 +1204,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "514589f2-a6ce-4dab-911e-94e1da72c526")
+			(uuid "eea8c34b-6932-4793-b77a-53b745b86ccc")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "20a65de3-a141-472d-b034-e3dcd9cb7b6d")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -1229,7 +1281,7 @@
 		(property "Reference" "R4"
 			(at 0 -1.65 90)
 			(layer "F.SilkS")
-			(uuid "fd37108a-bd42-4742-bd2d-c65290c52e0b")
+			(uuid "b81b2f70-bfa9-400a-a188-284077054c83")
 			(effects
 				(font
 					(size 1 1)
@@ -1240,7 +1292,7 @@
 		(property "Value" "5.1k"
 			(at 0 1.65 90)
 			(layer "F.Fab")
-			(uuid "11c44afd-218d-4cf0-87fb-879fdfc99213")
+			(uuid "417bc0d9-90e8-4be7-928e-63d7340e3151")
 			(effects
 				(font
 					(size 1 1)
@@ -1252,7 +1304,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7db6f932-ff57-4f3b-903e-0039575ae458")
+			(uuid "feaae2dc-05f7-463b-8b71-15147ec0a1ce")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1264,10 +1316,23 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e495bfb0-d4de-4894-8414-eaf1202feab4")
+			(uuid "4925c182-96be-43b2-95a0-ca792619375f")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "311-5.1KARCT-ND"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f44bfe31-47dd-412a-96b6-8d5271ff29c4")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -1428,7 +1493,7 @@
 		(property "Reference" "U1"
 			(at 0 -3.4 0)
 			(layer "F.SilkS")
-			(uuid "8995e36e-2ab0-4bff-87ef-913420f45c26")
+			(uuid "bd81bdff-d886-4a24-93e0-4acb38124493")
 			(effects
 				(font
 					(size 1 1)
@@ -1439,7 +1504,7 @@
 		(property "Value" "MAX31855KASA"
 			(at 0 3.4 0)
 			(layer "F.Fab")
-			(uuid "0a435433-b78b-4eaf-92d3-d4de02e91f07")
+			(uuid "78ba8998-a1ed-4f15-b702-4555e9b406bf")
 			(effects
 				(font
 					(size 1 1)
@@ -1451,7 +1516,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "294c7011-3226-4db7-b42a-c336de2f7e20")
+			(uuid "d3c7934a-b142-4862-8346-b70dab68dfba")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1463,10 +1528,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "87474128-aa12-46fa-a97a-8bec294404f8")
+			(uuid "0595d4c9-734b-48a0-9b66-bd2dd24cb57e")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "MAX31855KASA+TCT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "528c24ab-4317-46d6-8715-cf05c2228694")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -1795,7 +1873,7 @@
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "e93c2730-ae71-463a-ae51-c1654872207c")
+			(uuid "e2a842c6-3e2c-484c-af53-88d401b502e1")
 			(effects
 				(font
 					(size 1 1)
@@ -1807,7 +1885,7 @@
 			(at 0 -5 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "42fe410c-3321-46cc-8a39-c8cc9b7835d6")
+			(uuid "cd3d1a17-4c17-407f-b9b4-5b91752ea348")
 			(effects
 				(font
 					(size 1 1)
@@ -1820,7 +1898,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c55f54b7-563d-4d93-a3cb-884f9557a79a")
+			(uuid "a4471622-f3c8-4357-a0d5-ff68bf986afa")
 			(effects
 				(font
 					(size 1 1)
@@ -1833,7 +1911,20 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3ae05ddd-1548-4ad9-8e9f-8edc482fceb0")
+			(uuid "cfd91b87-2cae-4507-a079-d2fbcb83d36b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "900-2171750001CT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d538630-7834-42a0-a33d-cf7b34d2cf92")
 			(effects
 				(font
 					(size 1 1)
@@ -1981,7 +2072,7 @@
 			(at -0.01 2.15 0)
 			(unlocked yes)
 			(layer "F.SilkS")
-			(uuid "be9b0991-5fff-49af-9ba1-586a9d3045b2")
+			(uuid "fda71b90-39e0-4e7f-b9ec-9870bb8d51ad")
 			(effects
 				(font
 					(size 1 1)
@@ -1993,7 +2084,7 @@
 			(at 0 2.8 0)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "6966cca9-a7bb-4a0f-93ce-d83118b977d4")
+			(uuid "32f37aa8-45f2-4c3b-8fdb-61c581cecb25")
 			(effects
 				(font
 					(size 1 1)
@@ -2006,7 +2097,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4542f893-2de6-401d-957a-f783a7c68de8")
+			(uuid "326b183e-d0b1-4579-bc8a-d33c145dc450")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2019,10 +2110,23 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "325d4e02-6c70-4d88-8199-1d6b491b813a")
+			(uuid "770c7034-caf1-486f-97a0-4ca703f1f935")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "296-TPS631000DRLRCT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cdf6f129-0ee0-4b8b-89d8-892a40d82895")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -2276,7 +2380,7 @@
 		(property "Reference" "J3"
 			(at 3.4 4.7 0)
 			(layer "F.SilkS")
-			(uuid "2f8c9f11-a2e8-41dc-befd-72477d2dec6c")
+			(uuid "0d8bbb39-30c2-45fe-bdf6-a12caa91cb6e")
 			(effects
 				(font
 					(size 1 1)
@@ -2287,7 +2391,7 @@
 		(property "Value" "Conn_01x04_Socket"
 			(at 3.75 4.6 0)
 			(layer "F.Fab")
-			(uuid "e075012e-8b1c-4e4d-9c1a-a8ac419b6b3b")
+			(uuid "cd81ccfe-5eb1-4c39-8eca-50280dc68cf2")
 			(effects
 				(font
 					(size 1 1)
@@ -2299,7 +2403,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "36bfd5c8-e49a-45f2-a189-a621bb31a6b8")
+			(uuid "4988c572-1aef-4962-a790-c992a9704e80")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2311,10 +2415,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1a2e4209-8229-4f4f-a6be-a9e483d45f46")
+			(uuid "1edeae4e-f1b1-4f3d-8580-05c6134775b2")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "455-B4B-XH-A-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f574847f-aa80-4046-ad16-1a2e9d381264")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -2742,7 +2859,7 @@
 		(property "Reference" "R3"
 			(at 0 1.55 90)
 			(layer "F.SilkS")
-			(uuid "d8630c5b-5ed9-47d0-b012-d00afe64eaff")
+			(uuid "75cc0c4a-89a6-4da3-88c0-dcb84ba71efb")
 			(effects
 				(font
 					(size 1 1)
@@ -2753,7 +2870,7 @@
 		(property "Value" "5.1k"
 			(at 0 1.65 90)
 			(layer "F.Fab")
-			(uuid "1c2bba9e-61c7-4a2e-a322-81935995cdde")
+			(uuid "8cd05681-9ee1-4dad-824a-93b9b1e8dd99")
 			(effects
 				(font
 					(size 1 1)
@@ -2765,7 +2882,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4e7991a0-0804-4bb6-80d0-be5385fdb092")
+			(uuid "109934ee-4522-4185-94ea-275043528f22")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2777,10 +2894,23 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "606ad490-3880-4f06-a2d5-51fd10b8f238")
+			(uuid "90257726-4516-4fa5-a2c9-bc631c0ca742")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "311-5.1KARCT-ND"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "caa322b5-9129-44b7-8c26-8f7762f9fb56")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -2942,7 +3072,7 @@
 			(at 0 -4.15 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "9e3b8ac7-e428-4cd8-84fb-a3abac968848")
+			(uuid "def0bfa5-b71a-42f7-a503-2fa29510b704")
 			(effects
 				(font
 					(size 1 1)
@@ -2953,7 +3083,7 @@
 		(property "Value" "MountingHole"
 			(at 0 4.15 0)
 			(layer "F.Fab")
-			(uuid "6d10d332-0f46-4087-a7c5-60f921f4915f")
+			(uuid "2b851ee2-f7e9-4359-95f8-44d238dabf44")
 			(effects
 				(font
 					(size 1 1)
@@ -2965,7 +3095,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ded2fb57-adbf-4711-b572-80177c8681ce")
+			(uuid "3d921b24-04de-4d17-bafa-0baef734fc1e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2977,10 +3107,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "35c7cda5-89a3-4488-b473-16fd436ae7f7")
+			(uuid "61baa62e-68c7-4d17-9bf9-dae388b3307e")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9056a9b8-54b2-4971-a144-8e8f1114baa3")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3041,7 +3184,7 @@
 		(property "Reference" "C1"
 			(at 0 1.7 0)
 			(layer "F.SilkS")
-			(uuid "69478b10-7527-43db-a91c-b72ee0380648")
+			(uuid "4469a791-83b0-49bc-876d-a1c65efd7092")
 			(effects
 				(font
 					(size 1 1)
@@ -3052,7 +3195,7 @@
 		(property "Value" "22uF"
 			(at 0 1.68 0)
 			(layer "F.Fab")
-			(uuid "96aa62cf-748a-49c5-b173-a1c62d0afd7f")
+			(uuid "a99af5e9-d477-4d43-ab82-cc24bb2af82d")
 			(effects
 				(font
 					(size 1 1)
@@ -3064,7 +3207,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ba77105e-8b64-4fdb-8276-8a2ff9385fb3")
+			(uuid "02453611-4628-436a-a0a4-7f8d498bea65")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3076,10 +3219,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "82d425e3-d9a1-4a7a-bf4d-3e1f583f1d3e")
+			(uuid "5f3ca59c-231b-42a3-a1de-16f29106aede")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "490-GRM21BZ71A226ME15LCT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a1cfd7cd-c169-4f14-8237-a84ff9c9744d")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3240,7 +3396,7 @@
 		(property "Reference" "R1"
 			(at 0 -1.65 0)
 			(layer "F.SilkS")
-			(uuid "c2e33f24-13a5-4596-911c-23297181dbd0")
+			(uuid "9dc2f94f-6021-437b-acce-496a97be2848")
 			(effects
 				(font
 					(size 1 1)
@@ -3251,7 +3407,7 @@
 		(property "Value" "511"
 			(at 0 1.65 0)
 			(layer "F.Fab")
-			(uuid "7650023f-1063-4ac2-9dc7-ea5a21f8cece")
+			(uuid "05c0838a-ecf6-4d80-912e-8386cbc176c4")
 			(effects
 				(font
 					(size 1 1)
@@ -3263,7 +3419,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3b39fcd1-f7f7-45e7-a87e-93d94f47d6a2")
+			(uuid "a0a3a210-300b-4b90-a94d-e3f2384bbcce")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3275,10 +3431,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b01c882d-6477-440e-a334-60b53ab4d81b")
+			(uuid "3aa4bc16-2c13-4e8b-a3a5-f1ad60c50e7f")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "311-511CRCT-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d186e250-efc3-46a7-bf39-5e0965614e23")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3440,7 +3609,7 @@
 		(property "Reference" "J1"
 			(at 1.2 4.8 0)
 			(layer "F.SilkS")
-			(uuid "f8abb2df-59ab-4768-9177-e909d7b99465")
+			(uuid "7447ae24-5122-4abd-8b16-651e63c2b3d6")
 			(effects
 				(font
 					(size 1 1)
@@ -3451,7 +3620,7 @@
 		(property "Value" "Conn_01x02_Socket"
 			(at 1.25 4.6 0)
 			(layer "F.Fab")
-			(uuid "058f2bc7-22cf-434e-bd91-dd9a084c2941")
+			(uuid "a6ef3227-5d04-4098-8259-a12bd0f5980a")
 			(effects
 				(font
 					(size 1 1)
@@ -3463,7 +3632,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "720d9ebc-117f-41f6-b7b6-92ffa8bdfcd8")
+			(uuid "5ef54776-f5cb-4594-8784-f92bd64f645f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3475,10 +3644,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "980cc18c-c65b-43d3-b609-254973211f60")
+			(uuid "518abe70-eab3-4c88-877f-41ada6821898")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "455-B2B-XH-A-ND"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "df3a7574-92f0-406a-abe4-e8154c55f8b6")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3885,7 +4067,7 @@
 			(at 0 -4.15 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "6694b812-4115-40e3-bbcd-db2c42cd5cb3")
+			(uuid "41ce9678-d879-408f-8d89-eec2447fbf37")
 			(effects
 				(font
 					(size 1 1)
@@ -3896,7 +4078,7 @@
 		(property "Value" "MountingHole"
 			(at 0 4.15 0)
 			(layer "F.Fab")
-			(uuid "0d3d0aff-812a-4f80-9d6e-1aa2481d4489")
+			(uuid "1e667474-9179-4fe3-a396-e6c54001dfe5")
 			(effects
 				(font
 					(size 1 1)
@@ -3908,7 +4090,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "84db4d82-e8ce-4b0c-a226-a939c48b9fb3")
+			(uuid "3948dd3a-665d-4066-a3a9-720fd13cc580")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3920,10 +4102,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0d056bd8-79a6-42bf-9b80-9d241e65a2fa")
+			(uuid "dcc96b36-b344-4282-9401-51bc431b7731")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5ede3bba-3d12-439c-b11e-1bce4b1f2405")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -3984,7 +4179,7 @@
 		(property "Reference" "L1"
 			(at 1.5 -1.7 90)
 			(layer "F.SilkS")
-			(uuid "e4a31282-62b3-459a-8fb7-761b871a1d45")
+			(uuid "5920f2ea-f2db-4a0d-98aa-64fd01522a13")
 			(effects
 				(font
 					(size 1 1)
@@ -3995,7 +4190,7 @@
 		(property "Value" "1uH"
 			(at 0 1.55 90)
 			(layer "F.Fab")
-			(uuid "e4c9fdde-b44f-4ea3-ad39-0ed7d57eacb8")
+			(uuid "93eeb57f-8cdf-4d81-b33c-df07e85330b2")
 			(effects
 				(font
 					(size 1 1)
@@ -4007,7 +4202,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1ac96dc5-ee6b-4ac2-b7c0-9513df3aab90")
+			(uuid "ecea9b8c-cb4c-4597-ae66-b652bd86d03a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4019,10 +4214,23 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f9694eda-8118-49b6-ac26-d3243e3c3b6f")
+			(uuid "713bf67e-d683-488c-af76-7a0fffbbc559")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "541-IHHP0805ZHER1R0M01CT-ND"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eb934b99-bec0-47ae-9178-91ebf39720a6")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -4185,7 +4393,7 @@
 		(property "Reference" "C2"
 			(at -2.85 0.1 0)
 			(layer "F.SilkS")
-			(uuid "6332b964-537f-4188-825c-93418597b9b5")
+			(uuid "c529881a-8ab3-4aea-910d-842d9080317b")
 			(effects
 				(font
 					(size 1 1)
@@ -4196,7 +4404,7 @@
 		(property "Value" "47uF"
 			(at 0 1.68 0)
 			(layer "F.Fab")
-			(uuid "4ff0a3a2-6c3a-4488-b28e-b7c4c512103e")
+			(uuid "9bca6efa-c93f-4baf-920b-8cdde5698f65")
 			(effects
 				(font
 					(size 1 1)
@@ -4208,7 +4416,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1cc620ca-ec8a-48a7-9533-fd2df74bb746")
+			(uuid "95e99c96-897f-438c-9a50-9fe0a05aed61")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4220,10 +4428,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e65032b9-6b6a-4bcb-8b56-36d56c4ed5a8")
+			(uuid "c6be4558-9ef6-49c8-ab7a-d95ec7df1e75")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "490-9961-1-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c6aa8312-001c-47cc-a0b7-d333decb4c60")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -4384,7 +4605,7 @@
 		(property "Reference" "C3"
 			(at -2.95 0.1 0)
 			(layer "F.SilkS")
-			(uuid "64fb2cf5-4b44-461a-af07-943dec3112a6")
+			(uuid "cc4b2603-5c96-45b4-97a5-1140fb1f4611")
 			(effects
 				(font
 					(size 1 1)
@@ -4395,7 +4616,7 @@
 		(property "Value" "0.1uF"
 			(at 0 1.68 0)
 			(layer "F.Fab")
-			(uuid "c981d6a6-1ae5-4a0e-b749-c6e820540159")
+			(uuid "ec49743b-9a02-40b2-90f8-9aef85971af1")
 			(effects
 				(font
 					(size 1 1)
@@ -4407,7 +4628,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "5704b832-910e-409e-a9af-1ae707a7061b")
+			(uuid "f90152d0-642b-47a2-ad36-a82a3ec4411e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4419,10 +4640,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "955a4d7b-74b0-4e31-bb51-4618c30f07f2")
+			(uuid "7c2008bf-167f-4b94-acfd-8cc56bc47654")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" "311-1140-1-ND"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1bce22b6-9064-4a7a-a17b-7a95189bc7d3")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -4584,7 +4818,7 @@
 			(at 0 -4.15 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "c14fc5eb-8e56-469a-9a01-fd39cbf66f1b")
+			(uuid "69dddfc1-7243-437e-bc0f-dcba12a4b24d")
 			(effects
 				(font
 					(size 1 1)
@@ -4595,7 +4829,7 @@
 		(property "Value" "MountingHole"
 			(at 0 4.15 0)
 			(layer "F.Fab")
-			(uuid "83988953-3c72-47b0-a078-26fe1f5a73c4")
+			(uuid "0b3cb080-ce0d-4591-aeed-b9b37dbeca5b")
 			(effects
 				(font
 					(size 1 1)
@@ -4607,7 +4841,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "5460fd0c-45e5-49ce-b9b7-e1b249e0f6f8")
+			(uuid "bf72e910-1678-48e4-b754-545840f589de")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4619,10 +4853,23 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0ee0f98d-0fbf-48a8-9bf1-1441c43c75dc")
+			(uuid "fd116d57-15e2-4f22-b13f-6f1d257aecf5")
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DigiKey Part Number" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "282ff81d-5d9b-4aeb-b89e-05743e825941")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)

@@ -53,6 +53,14 @@ pub async fn red_led(channel: &mut Channel<'static, Async, Tx>) -> Result<(), es
     channel.transmit(&pulses).await
 }
 
+#[allow(dead_code)]
+pub async fn green_led(
+    channel: &mut Channel<'static, Async, Tx>,
+) -> Result<(), esp_hal::rmt::Error> {
+    let pulses = rgb_to_pulses((0, 255, 0)).map_err(|_e| esp_hal::rmt::Error::InvalidDataLength)?;
+    channel.transmit(&pulses).await
+}
+
 fn rgb_to_pulses((r, g, b): (u8, u8, u8)) -> Result<Vec<PulseCode, 26>, PulseCode> {
     let mut bits: Vec<PulseCode, 26> = [g, r, b]
         .into_iter()

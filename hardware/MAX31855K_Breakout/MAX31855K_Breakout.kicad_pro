@@ -437,7 +437,7 @@
       "label_dangling": "error",
       "label_multiple_wires": "error",
       "lib_symbol_issues": "error",
-      "lib_symbol_mismatch": "ignore",
+      "lib_symbol_mismatch": "error",
       "missing_bidi_pin": "error",
       "missing_input_pin": "error",
       "missing_power_pin": "error",
@@ -465,8 +465,12 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_footprint_libs": [
+      "Reflow_Oven"
+    ],
+    "pinned_symbol_libs": [
+      "Reflow_Oven"
+    ]
   },
   "meta": {
     "filename": "MAX31855K_Breakout.kicad_pro",
@@ -600,7 +604,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": true,
+      "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"

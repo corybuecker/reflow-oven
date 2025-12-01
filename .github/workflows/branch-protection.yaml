@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: ./software
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
       - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c
         with:
           target: riscv32imac-unknown-none-elf
@@ -29,7 +29,7 @@ jobs:
       # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
       options: --user root
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
       # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
       - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity $GITHUB_WORKSPACE/hardware/MAX31855K_Breakout/MAX31855K_Breakout.kicad_pcb"
       # - run: su - kicad -c "kicad-cli pcb drc -o /tmp/report $GITHUB_WORKSPACE/hardware/MAX31855K_Breakout/MAX31855K_Breakout.kicad_pcb && cat /tmp/report"

@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  lint-software:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -22,9 +22,22 @@ jobs:
           components: clippy
       - run: cargo clippy -- -D warnings
 
+  lint-hardware:
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad@sha256:152dc8b93f01c895287e2ffce151dd142ac7e7d1195cdddcc6baf981177f8da2
+      # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
+      options: --user root
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+      # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
+      - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity $GITHUB_WORKSPACE/hardware/MAX31855K_Breakout/MAX31855K_Breakout.kicad_pcb"
+      # - run: su - kicad -c "kicad-cli pcb drc -o /tmp/report $GITHUB_WORKSPACE/hardware/MAX31855K_Breakout/MAX31855K_Breakout.kicad_pcb && cat /tmp/report"
+
   check-success:
     runs-on: ubuntu-latest
     needs:
-      - lint
+      - lint-software
+      - lint-hardware
     steps:
       - run: echo true

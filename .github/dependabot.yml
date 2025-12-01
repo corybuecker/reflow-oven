@@ -1,12 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: "cargo"
+  - package-ecosystem: cargo
     directories:
       - software
     schedule:
-      interval: "weekly"
-  - package-ecosystem: "github-actions"
+      interval: monthly
+  - package-ecosystem: github-actions
     directories:
       - /
     schedule:
-      interval: "weekly"
+      interval: monthly

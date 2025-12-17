@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "Reflow_Oven")(type "KiCad")(uri "../Reflow_Oven.kicad_sym")(options "")(descr ""))
-)

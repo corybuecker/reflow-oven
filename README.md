@@ -1,2 +1,1 @@
-# reflow-oven
-The plans, BoM, instructions, etc. for a soldering reflow oven
+This project has moved to [https://projects.corybuecker.com.com/corybuecker/reflow-oven](https://projects.corybuecker.com.com/corybuecker/reflow-oven).

@@ -20,4 +20,4 @@ heapless = { version = "0.9.1" }
 pid = "4.0.0"
 splines = { version = "5.0.0", default-features = false, features = ["num-traits"] }
 static_cell = "2.1.1"
-uuid = { version = "1.18.1", default-features = false }
+uuid = { version = "1.19.0", default-features = false }

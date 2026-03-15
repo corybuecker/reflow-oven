@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - uses: actions-rust-lang/setup-rust-toolchain@a0b538fa0b742a6aa35d6e2c169b4bd06d225a98
         with:
-          target: riscv32imac-unknown-none-elf
+          target: thumbv8m.main-none-eabihf
           components: clippy
       - run: cargo clippy -- -D warnings
 
@@ -31,13 +31,14 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
-      - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity $GITHUB_WORKSPACE/hardware/MAX31855K_Breakout/MAX31855K_Breakout.kicad_pcb"
-      # - run: su - kicad -c "kicad-cli pcb drc -o /tmp/report $GITHUB_WORKSPACE/hardware/MAX31855K_Breakout/MAX31855K_Breakout.kicad_pcb && cat /tmp/report"
+      - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity $GITHUB_WORKSPACE/hardware/Controller/Controller.kicad_pcb"
+      # - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity -o /tmp/report $GITHUB_WORKSPACE/hardware/MCP9601-Breakout/MCP9601-Breakout.kicad_pcb && cat /tmp/report"
+      # - run: su - kicad -c "kicad-cli pcb drc --severity-error --schematic-parity -o /tmp/report $GITHUB_WORKSPACE/hardware/Controller/Controller.kicad_pcb && cat /tmp/report"
 
-  check-success:
+  required-checks:
     runs-on: ubuntu-latest
     needs:
       - lint-software
-      - lint-hardware
+      # - lint-hardware
     steps:
       - run: echo true

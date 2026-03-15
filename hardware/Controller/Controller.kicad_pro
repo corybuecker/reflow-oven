@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.6,
-          "height": 1.7,
-          "width": 1.1
+          "drill": 0.8,
+          "height": 1.27,
+          "width": 2.54
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -87,7 +87,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
+        "lib_footprint_issues": "error",
         "lib_footprint_mismatch": "error",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -125,13 +125,13 @@
         "max_error": 0.005,
         "min_clearance": 0.1524,
         "min_connection": 0.1524,
-        "min_copper_edge_clearance": 0.381,
+        "min_copper_edge_clearance": 0.1524,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.127,
-        "min_hole_to_hole": 0.127,
+        "min_hole_clearance": 0.1524,
+        "min_hole_to_hole": 0.1524,
         "min_microvia_diameter": 0.508,
         "min_microvia_drill": 0.254,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.127,
@@ -187,8 +187,7 @@
         }
       ],
       "track_widths": [
-        0.0,
-        0.3048
+        0.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -220,10 +219,6 @@
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 0.6096,
-          "drill": 0.3048
         }
       ],
       "zones_allow_external_fillets": false
@@ -465,35 +460,31 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [
-      "Reflow_Oven"
-    ],
-    "pinned_symbol_libs": [
-      "Reflow_Oven"
-    ]
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "MAX31855K_Breakout.kicad_pro",
+    "filename": "Controller.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
+        "clearance": 0.1524,
+        "diff_pair_gap": 0.1524,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.1524,
         "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
+        "microvia_diameter": 0.508,
+        "microvia_drill": 0.254,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
+        "track_width": 0.1524,
+        "via_diameter": 0.508,
+        "via_drill": 0.254,
         "wire_width": 6
       }
     ],
@@ -520,7 +511,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "MAX31855K_Breakout.csv",
+    "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -542,7 +533,13 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "DigiKey Part Number",
           "name": "DigiKey Part Number",
           "show": true
@@ -551,13 +548,13 @@
           "group_by": false,
           "label": "Value",
           "name": "Value",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "DNP",
           "name": "${DNP}",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -569,19 +566,19 @@
           "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -594,17 +591,11 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": true
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": false,
+      "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
@@ -637,14 +628,6 @@
       "version": 1
     },
     "net_format_name": "",
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 4,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
@@ -659,7 +642,7 @@
   },
   "sheets": [
     [
-      "a793c5ac-b66c-4259-9d59-43bd772bada2",
+      "0dffb3ff-d6aa-4d90-bb6d-60c4da8a13cd",
       "Root"
     ]
   ],

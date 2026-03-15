@@ -1,7 +1,11 @@
 use core::cell::RefCell;
+use embassy_stm32::{
+    gpio::Output,
+    mode::Async,
+    spi::{Spi, mode::Master},
+};
 use embassy_sync::blocking_mutex::CriticalSectionMutex;
 use embassy_time::Timer;
-use esp_hal::{Blocking, spi::master::Spi};
 
 #[allow(dead_code)]
 pub struct Temperature {
@@ -22,9 +26,16 @@ impl Temperature {
 
 #[allow(dead_code)]
 impl<'temperature> Temperature {
-    pub async fn read_continuous(&self, spi: &mut Spi<'temperature, Blocking>) -> ! {
+    pub async fn read_continuous(
+        &self,
+        cs: &mut Output<'temperature>,
+        spi: &mut Spi<'temperature, Async, Master>,
+    ) -> ! {
         loop {
-            self.read(spi);
+            cs.set_low();
+            Timer::after_micros(100).await;
+            self.read(spi).await;
+            cs.set_high();
             Timer::after_millis(100).await;
         }
     }
@@ -33,13 +44,14 @@ impl<'temperature> Temperature {
         self.value.lock(|value| *value.borrow())
     }
 
-    fn read(&self, spi: &mut Spi<'temperature, Blocking>) {
+    async fn read(&self, spi: &mut Spi<'temperature, Async, Master>) {
         let mut buffer: [u8; 4] = [0; 4];
         let mut read_value: f32 = 0.0;
 
-        match spi.read(&mut buffer) {
+        match spi.read(&mut buffer).await {
             Ok(_) => {
                 let [b0, b1, b2, b3] = buffer;
+                // defmt::debug!("thermocouple_temperature {}", buffer);
 
                 let raw_data: u32 =
                     ((b0 as u32) << 24) | ((b1 as u32) << 16) | ((b2 as u32) << 8) | (b3 as u32);
@@ -54,7 +66,7 @@ impl<'temperature> Temperature {
                 // defmt::debug!("thermocouple_temperature {}", read_value);
             }
             Err(e) => {
-                defmt::error!("{}", e);
+                defmt::error!("error reading temperature: {}", e);
             }
         }
 

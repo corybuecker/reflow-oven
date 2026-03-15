@@ -1,0 +1,97 @@
+(footprint "SMAJ5.0A"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -1.7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "44b56747-82bf-41d3-8382-2cdc74041ef6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SMAJ5.0A"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e033fc5f-c704-4b89-b1c4-a660c1a6bc5d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.vishay.com/docs/88390/smaj50a.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "52f9ae09-43fb-4ee5-bad1-4244fc15786d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Surface-Mount TRANSZORB® Transient Voltage Suppressors"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ccda4918-9bb1-4625-afb0-0dc1a536a673")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -2.6 -1)
+		(end 2.6 1)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6bfeb48d-51e6-4bd8-a257-4500b34f945f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 4 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "0ca5a671-3dcf-46c2-a2a9-2091bdae36b2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 1.7 0)
+		(size 1.52 1.68)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1644736842)
+		(solder_paste_margin_ratio -0.1)
+		(uuid "5f173e7c-a800-4127-a012-77447b8114f9")
+	)
+	(pad "2" smd roundrect
+		(at -1.7 0)
+		(size 1.52 1.68)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1644736842)
+		(solder_paste_margin_ratio -0.1)
+		(uuid "84cd4c2e-aaed-4f21-ac9e-991fb1279b7b")
+	)
+	(embedded_fonts no)
+)

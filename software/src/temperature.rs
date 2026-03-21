@@ -1,11 +1,7 @@
 use core::cell::RefCell;
-use embassy_stm32::{
-    gpio::Output,
-    mode::Async,
-    spi::{Spi, mode::Master},
-};
 use embassy_sync::blocking_mutex::CriticalSectionMutex;
 use embassy_time::Timer;
+use esp_hal::{Blocking, i2c::master::I2c};
 
 #[allow(dead_code)]
 pub struct Temperature {
@@ -26,16 +22,10 @@ impl Temperature {
 
 #[allow(dead_code)]
 impl<'temperature> Temperature {
-    pub async fn read_continuous(
-        &self,
-        cs: &mut Output<'temperature>,
-        spi: &mut Spi<'temperature, Async, Master>,
-    ) -> ! {
+    pub async fn read_continuous(&self, i2c: &mut I2c<'temperature, Blocking>) -> ! {
         loop {
-            cs.set_low();
             Timer::after_micros(100).await;
-            self.read(spi).await;
-            cs.set_high();
+            self.read(i2c).await;
             Timer::after_millis(100).await;
         }
     }
@@ -44,26 +34,18 @@ impl<'temperature> Temperature {
         self.value.lock(|value| *value.borrow())
     }
 
-    async fn read(&self, spi: &mut Spi<'temperature, Async, Master>) {
-        let mut buffer: [u8; 4] = [0; 4];
+    async fn read(&self, i2c: &mut I2c<'temperature, Blocking>) {
+        let write_buffer = [0x00u8];
+        let mut read_buffer = [0u8; 2];
         let mut read_value: f32 = 0.0;
 
-        match spi.read(&mut buffer).await {
+        match i2c.write_read(0b1100000, &write_buffer, &mut read_buffer) {
             Ok(_) => {
-                let [b0, b1, b2, b3] = buffer;
-                // defmt::debug!("thermocouple_temperature {}", buffer);
+                let [upper, lower] = read_buffer;
+                let raw: u16 = (upper as u16) << 8 | lower as u16;
+                let raw = raw as i16;
 
-                let raw_data: u32 =
-                    ((b0 as u32) << 24) | ((b1 as u32) << 16) | ((b2 as u32) << 8) | (b3 as u32);
-                // defmt::debug!("{:032b}", raw_data);
-                let thermocouple_temperature = (raw_data >> 18) & 0b0011_1111_1111_1111;
-
-                #[allow(unused)]
-                let junction_temperature = (raw_data >> 4) & 0b0000_1111_1111_1111;
-
-                read_value = thermocouple_temperature as f32 * 0.25;
-                // read_value = (thermocouple_temperature as f32 * 0.25) + local_offset;
-                // defmt::debug!("thermocouple_temperature {}", read_value);
+                read_value = raw as f32 / 16.0;
             }
             Err(e) => {
                 defmt::error!("error reading temperature: {}", e);

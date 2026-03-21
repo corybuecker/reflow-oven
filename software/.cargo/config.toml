@@ -1,16 +1,29 @@
 [build]
-target = "thumbv8m.main-none-eabihf"
+target = "riscv32imac-unknown-none-elf"
 
-[target.thumbv8m.main-none-eabihf]
-runner = "probe-rs run --chip STM32H533RE"
+[target.riscv32imac-unknown-none-elf]
+runner = "probe-rs run --chip esp32c6 --allow-erase-all"
 
 rustflags = [
-  "-C", "link-arg=-Tlink.x",
+  # Passes -Tlinkall.x to the linker. This is the primary linker script provided
+  # by esp-hal that defines the memory layout (flash, RAM sections, entry point)
+  # for the ESP32-C6 target.
+  "-C", "link-arg=-Tlinkall.x",
+
+  # Passes -Tdefmt.x to the linker. This linker script is required by the defmt
+  # logging framework and arranges the .defmt section so that log strings are
+  # stored in flash and can be decoded by probe-rs / defmt-print at runtime.
   "-C", "link-arg=-Tdefmt.x",
+
+  # Forces the compiler to always emit frame pointers instead of reusing that
+  # register for general-purpose code. This makes stack unwinding reliable and
+  # improves the quality of backtraces shown by probe-rs when debugging.
+  "-C", "force-frame-pointers"
 ]
 
 [env]
 DEFMT_LOG="trace"
 
 [profile.release]
+opt = "s"
 debug = true

@@ -25,20 +25,23 @@ jobs:
   lint-hardware:
     runs-on: ubuntu-latest
     container:
-      image: kicad/kicad@sha256:152dc8b93f01c895287e2ffce151dd142ac7e7d1195cdddcc6baf981177f8da2
+      image: kicad/kicad@sha256:6bd21a8e12eaa6fab7ca72818c6af4e441be53b5b82f2d1d611208827d9a7cc7
       # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
       options: --user root
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       # https://docs.github.com/en/actions/reference/workflows-and-actions/dockerfile-support#user
-      - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity $GITHUB_WORKSPACE/hardware/Controller/Controller.kicad_pcb"
-      # - run: su - kicad -c "kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity -o /tmp/report $GITHUB_WORKSPACE/hardware/MCP9601-Breakout/MCP9601-Breakout.kicad_pcb && cat /tmp/report"
-      # - run: su - kicad -c "kicad-cli pcb drc --severity-error --schematic-parity -o /tmp/report $GITHUB_WORKSPACE/hardware/Controller/Controller.kicad_pcb && cat /tmp/report"
+      - run: |
+          su - kicad -c "cd $GITHUB_WORKSPACE/hardware/MCP9601-Sensor && kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity -o /tmp/report MCP9601-Sensor.kicad_pcb"
+      - run: |
+          su - kicad -c "cd $GITHUB_WORKSPACE/hardware/STM32H533-Breakout && kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity -o /tmp/report STM32H533-Breakout.kicad_pcb"
+      - run: |
+          su - kicad -c "cd $GITHUB_WORKSPACE/hardware/TPS631000-Buck-Boost-Converter && kicad-cli pcb drc --exit-code-violations --severity-error --schematic-parity -o /tmp/report TPS631000-Buck-Boost-Converter.kicad_pcb"
 
   required-checks:
     runs-on: ubuntu-latest
     needs:
       - lint-software
-      # - lint-hardware
+      - lint-hardware
     steps:
       - run: echo true

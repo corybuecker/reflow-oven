@@ -1,0 +1,149 @@
+(footprint "BSS138"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "N-Channel Logic Level Enhancement Mode Field Effect Transistor")
+	(property "Reference" "REF**"
+		(at 0 -2.3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "07e0bdb3-2a9b-4f0f-9217-d9616d99e95c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "BSS138"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "524910fd-faff-43d8-a9f4-2d50ef8ff160")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/bat54clt1-d.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b1ca4d6-c721-41f8-a626-0853228d5158")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "N-Channel Logic Level Enhancement Mode Field Effect Transistor"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3d87f568-2d79-40c0-96a5-89edf4fd110a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -1.4 -1.6)
+		(end 1.4 1.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "4f220026-64bc-4675-9264-a3b8af1b0e68")
+	)
+	(fp_rect
+		(start -1.65 -1.85)
+		(end 1.65 1.85)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "93ce1aa9-c031-4b01-9fae-05f8d1b3aec3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "82bdee85-e956-4981-be7f-f86d092c20d1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.95 0.975)
+		(size 0.56 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(solder_paste_margin_ratio -0.15)
+		(uuid "1d988f42-255b-4c88-8ca1-e1e31e45c7ea")
+	)
+	(pad "2" smd roundrect
+		(at 0.95 0.975)
+		(size 0.56 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(solder_paste_margin_ratio -0.15)
+		(uuid "106467dc-915e-4f1a-944d-5672e29911bd")
+	)
+	(pad "3" smd roundrect
+		(at 0 -0.975)
+		(size 0.56 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(solder_paste_margin_ratio -0.15)
+		(uuid "c87a66e6-1b13-41d9-9c90-7c4a7dd17658")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "F.CrtYd")
+		(uuid "d1151776-4cdd-4bfa-abba-b0dbf5ac92c0")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads not_allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy -1.65 -1.85) (xy 1.65 -1.85) (xy 1.65 1.85) (xy -1.65 1.85)
+			)
+		)
+	)
+	(embedded_fonts no)
+)

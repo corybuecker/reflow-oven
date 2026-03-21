@@ -55,6 +55,50 @@
 	)
 	(attr smd)
 	(fp_rect
+		(start -2.35 2.15)
+		(end -2.15 2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "add9c555-88f8-414c-aac0-52718244f144")
+	)
+	(fp_rect
+		(start 2.15 -2.35)
+		(end 2.35 -2.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "bc363609-fc84-40aa-a260-2a840bd53074")
+	)
+	(fp_rect
+		(start 2.15 2.15)
+		(end 2.35 2.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "ede6e181-7387-47a0-aa27-36af2361c12b")
+	)
+	(fp_circle
+		(center -2.25 -2.25)
+		(end -2.05 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "128d4bb6-6329-4edb-8ace-c3faeb353d48")
+	)
+	(fp_rect
 		(start -3 -3)
 		(end 3 3)
 		(stroke

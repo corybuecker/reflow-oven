@@ -121,6 +121,13 @@ async fn main(_spawner: Spawner) -> ! {
 
     let temperature = Temperature::default();
 
+    defmt::info!("initializing...");
+
+    // for i in 1..10 {
+    //     defmt::info!("{}...", 10 - i);
+    //     Timer::after_secs(1).await;
+    // }
+
     join(
         temperature.read_continuous(&mut i2c),
         adjust_temperature_wrapper(output, led_channel, &temperature),

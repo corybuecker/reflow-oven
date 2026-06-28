@@ -35,13 +35,14 @@ impl<'temperature> Temperature {
     }
 
     async fn read(&self, i2c: &mut I2c<'temperature, Blocking>) {
-        let write_buffer = [0x00u8];
+        let write_buffer = [0b00000100];
         let mut read_buffer = [0u8; 2];
         let mut read_value: f32 = 0.0;
 
         match i2c.write_read(0b1100000, &write_buffer, &mut read_buffer) {
             Ok(_) => {
                 let [upper, lower] = read_buffer;
+                defmt::debug!("{:08b}", read_buffer);
                 let raw: u16 = (upper as u16) << 8 | lower as u16;
                 let raw = raw as i16;
 

@@ -18,3 +18,9 @@ esp-rtos = { version = "0.3.0", features = ["embassy", "esp32c6"] }
 heapless = "0.9.3"
 pid = "4.0.0"
 splines = { version = "5.0.0", default-features = false, features = ["num-traits"] }
+
+[profile.release]
+codegen-units = 1
+debug         = 2
+lto           = 'fat'
+opt-level     = 's'

@@ -2,7 +2,7 @@
 target = "riscv32imac-unknown-none-elf"
 
 [target.riscv32imac-unknown-none-elf]
-runner = "probe-rs run --chip esp32c6 --allow-erase-all"
+runner = "probe-rs run --chip=esp32c6 --preverify --always-print-stacktrace --no-location"
 
 rustflags = [
   # Passes -Tlinkall.x to the linker. This is the primary linker script provided
@@ -23,7 +23,3 @@ rustflags = [
 
 [env]
 DEFMT_LOG="trace"
-
-[profile.release]
-opt = "s"
-debug = true

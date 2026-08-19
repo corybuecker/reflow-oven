@@ -94,6 +94,9 @@ async fn main(_spawner: Spawner) -> ! {
 
     defmt::info!("starting up...");
     let peripherals = esp_hal::init(Default::default());
+
+    // esp_alloc::psram_allocator!(peripherals.PSRAM, esp_hal::psram);
+
     let sw_int = SoftwareInterruptControl::new(peripherals.SW_INTERRUPT);
     let timg0 = TimerGroup::new(peripherals.TIMG0);
 
@@ -104,7 +107,7 @@ async fn main(_spawner: Spawner) -> ! {
 
     let mut i2c = I2c::new(
         peripherals.I2C0,
-        Config::default().with_frequency(Rate::from_hz(40000)),
+        Config::default().with_frequency(Rate::from_hz(100000)),
     )
     .unwrap()
     .with_scl(scl)
@@ -123,10 +126,10 @@ async fn main(_spawner: Spawner) -> ! {
 
     defmt::info!("initializing...");
 
-    // for i in 1..10 {
-    //     defmt::info!("{}...", 10 - i);
-    //     Timer::after_secs(1).await;
-    // }
+    for i in 1..10 {
+        defmt::info!("{}...", 10 - i);
+        Timer::after_secs(1).await;
+    }
 
     join(
         temperature.read_continuous(&mut i2c),

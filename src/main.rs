@@ -94,6 +94,9 @@ async fn main(_spawner: Spawner) -> ! {
 
     defmt::info!("starting up...");
     let peripherals = esp_hal::init(Default::default());
+
+    // esp_alloc::psram_allocator!(peripherals.PSRAM, esp_hal::psram);
+
     let sw_int = SoftwareInterruptControl::new(peripherals.SW_INTERRUPT);
     let timg0 = TimerGroup::new(peripherals.TIMG0);
 
